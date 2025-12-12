@@ -197,14 +197,18 @@ a.atl-link:hover {
 
 .atl-code-block {
   font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
-  font-size: 0.875rem;
-  background: var(--atl-neutral-lightest);
-  padding: 8px 12px;
-  border-radius: 3px;
+  font-size: 0.9375rem;
+  background: var(--atl-blue-light);
+  color: var(--atl-blue);
+  border: 1px solid var(--atl-blue);
+  padding: 10px 14px;
+  border-radius: 4px;
   display: block;
-  margin-top: 4px;
+  margin-top: 6px;
   white-space: pre-wrap;
   word-break: break-all;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -214,8 +218,9 @@ a.atl-link:hover {
   }
 
   .atl-code-block {
-    background: #1D2125;
-    color: #B3BAC5;
+    background: #22272B;
+    color: #C1C7D0;
+    border-color: #2684FF;
   }
 }
 
