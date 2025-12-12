@@ -302,4 +302,9 @@ a.atl-link:hover {
     border-top-color: #38414A;
     color: #8C9CB8;
   }
+
+  /* Tailwindのtext-atlassian-blueクラスをダークモードで明るく */
+  .text-atlassian-blue {
+    color: #4C9AFF !important;
+  }
 }
