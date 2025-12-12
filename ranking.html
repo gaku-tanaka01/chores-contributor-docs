@@ -4,119 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>俺のグループ の週間ランキング</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 24px;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-      color: #333;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
-      color: #333;
-    }
-    p {
-      margin: 4px 0 16px;
-      color: #555;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 16px;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px 12px;
-      text-align: left;
-    }
-    th {
-      background: #f5f5f5;
-      font-weight: 600;
-    }
-    tbody tr:nth-child(even) {
-      background: #f8f9fa;
-    }
-    .champion {
-      background: #fff9e6 !important;
-      font-weight: bold;
-    }
-    .champion td {
-      border-color: #ffd700;
-    }
-    .empty {
-      margin-top: 24px;
-      font-style: italic;
-      color: #888;
-    }
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #0b0d12;
-        color: #e5e7eb;
-      }
-      h1 {
-        color: #e5e7eb;
-      }
-      p {
-        color: #cbd5e0;
-      }
-      table {
-        border-color: #2d3748;
-      }
-      th, td {
-        border-color: #2d3748;
-      }
-      th {
-        background: #1f2937;
-      }
-      tbody tr:nth-child(even) {
-        background: #111827;
-      }
-      .champion {
-        background: #2d2416 !important;
-      }
-      .champion td {
-        border-color: #ffd700;
-      }
-      .empty {
-        color: #9ca3af;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>俺のグループ の週間ランキング</h1>
-  <p>集計期間: 2025-12-08 〜 2025-12-14</p>
+
   
-  <table>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="max-w-3xl mx-auto p-6 text-slate-800 dark:text-slate-200 dark:bg-slate-900">
+  <h1 class="text-3xl font-bold mb-3 text-slate-900 dark:text-slate-100">俺のグループ の週間ランキング</h1>
+  <p class="text-slate-600 dark:text-slate-300 mb-4">集計期間: 2025-12-08 〜 2025-12-14</p>
+  
+  <table class="w-full mt-4 border-collapse border border-slate-300 dark:border-slate-600">
     <thead>
       <tr>
-        <th scope="col">順位</th>
-        <th scope="col">名前</th>
-        <th scope="col">ポイント</th>
+        <th scope="col" class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">順位</th>
+        <th scope="col" class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">名前</th>
+        <th scope="col" class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">ポイント</th>
       </tr>
     </thead>
     <tbody>
     
-      <tr class="champion">
-        <td>1</td>
-        <td>星瞬</td>
-        <td>1160pt</td>
+      <tr class="bg-amber-50 dark:bg-amber-900/20 font-bold">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 border-amber-300 dark:border-amber-600">1</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 border-amber-300 dark:border-amber-600">星瞬</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 border-amber-300 dark:border-amber-600">1160pt</td>
       </tr>
     
-      <tr>
-        <td>2</td>
-        <td>田中 樂空</td>
-        <td>600pt</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">2</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">田中 樂空</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">600pt</td>
       </tr>
     
-      <tr>
-        <td>3</td>
-        <td>山士家</td>
-        <td>400pt</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">3</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">山士家</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">400pt</td>
       </tr>
     
     </tbody>

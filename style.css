@@ -1,0 +1,12 @@
+/* 共通スタイル - Tailwindで表現しづらい微調整用 */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  /* Tailwindのdark:クラスで対応できるものはそちらを使用 */
+  /* ここにはTailwindで表現しづらい細かい調整のみ */
+}
