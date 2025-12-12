@@ -1,66 +1,136 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>@bot コマンド一覧</title>
-<style>
-  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; padding: 24px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-  h1 { font-size: 28px; margin-bottom: 8px; color: #333; }
-  h2 { font-size: 20px; margin-top: 32px; margin-bottom: 16px; color: #555; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; }
-  h3 { font-size: 16px; margin-top: 24px; margin-bottom: 12px; color: #666; }
-  .command { background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 12px 0; border-left: 4px solid #4285f4; }
-  .command-name { font-weight: bold; color: #1a73e8; font-size: 16px; margin-bottom: 4px; }
-  .command-desc { color: #555; margin-top: 4px; }
-  .command-example { color: #666; font-size: 0.9em; margin-top: 8px; font-family: 'Courier New', monospace; }
-  .aliases { color: #888; font-size: 0.85em; margin-top: 4px; }
-  .note { background: #fff3cd; padding: 12px; border-radius: 6px; margin: 16px 0; border-left: 4px solid #ffc107; }
-  .note-title { font-weight: bold; color: #856404; margin-bottom: 4px; }
-  ul { margin: 8px 0; padding-left: 24px; }
-  li { margin: 4px 0; }
-  .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.9em; text-align: center; }
-</style>
-</head><body>
-<h1>@bot コマンド一覧</h1>
-<p>LINE Botで使用できるコマンドの一覧です。</p>
-<h2>基本的な使い方</h2>
-<div class="command">
-<div class="command-name">@bot 家事報告</div><div class="command-desc">登録されているタスク名を入力すると、その家事を報告できます。タスク名の後にメモを追加することもできます。タスク名はかな/英語/タイプミス1文字まで自動補正されます。</div><div class="command-example">例: @bot 皿洗い または @bot 皿洗い 15分</div></div>
-<div class="command">
-<div class="command-name">@bot me</div><div class="command-desc">今週の自分のポイントと内訳を表示します。</div><div class="command-example">例: @bot me</div></div>
-<div class="command">
-<div class="command-name">@bot top</div><div class="command-desc">今週のグループ内ポイントランキングを表示します。</div><div class="command-example">例: @bot top</div></div>
-<div class="command">
-<div class="command-name">@bot 取消</div><div class="aliases">別名: 取り消し, キャンセル, cancel</div><div class="command-desc">直前の報告を取り消します。</div><div class="command-example">例: @bot 取消</div></div>
-<h2>タスク管理</h2>
-<div class="command">
-<div class="command-name">@bot task</div><div class="aliases">別名: tasks</div><div class="command-desc">登録されているタスク一覧とポイントを表示します。</div><div class="command-example">例: @bot task</div></div>
-<div class="command">
-<div class="command-name">@bot add</div><div class="command-desc">新しいタスクを追加します。</div><div class="command-example">使い方: @bot add タスク名 ポイント</div><div class="command-example">例: @bot add 掃除機がけ 150</div></div>
-<div class="command">
-<div class="command-name">@bot delete</div><div class="command-desc">登録されているタスクを削除します。登録されているタスク名と同じ表記のときだけ削除できます。</div><div class="command-example">使い方: @bot delete タスク名</div><div class="command-example">例: @bot delete 掃除機がけ</div></div>
-<h2>一時タスク</h2>
-<div class="command">
-<div class="command-name">✨ @bot temp</div>
-<div class="command-desc">一時タスクでポイントを追加します。タスク登録不要で、その場でポイントを追加できます。</div>
-<div class="command-example">使い方: @bot temp タスク名 ポイント</div>
-<div class="command-example">例: @bot temp 買い物 100</div>
-</div>
-<h2>ヘルプ</h2>
-<div class="command">
-<div class="command-name">@bot help</div>
-<div class="command-desc">このコマンド一覧をLINE上で表示します。</div>
-<div class="command-example">例: @bot help</div>
-</div>
-<div class="note">
-<div class="note-title">💡 便利な機能</div>
-<ul>
-<li>タスク名はかな/英語/タイプミス1文字まで自動補正されます</li>
-<li>家事報告時にメモを追加できます（例: @bot 皿洗い 15分）</li>
-<li>タスク名の大文字小文字は区別されません</li>
-</ul>
-</div>
-<div class="footer">
-<p>最終更新: 自動生成</p>
-</div>
-</body></html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@bot コマンド一覧</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; padding: 24px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+    h1 { font-size: 28px; margin-bottom: 8px; color: #333; }
+    h2 { font-size: 20px; margin-top: 32px; margin-bottom: 16px; color: #555; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; }
+    h3 { font-size: 16px; margin-top: 24px; margin-bottom: 12px; color: #666; }
+    .command { background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 12px 0; border-left: 4px solid #4285f4; }
+    .command-name { font-weight: bold; color: #1a73e8; font-size: 16px; margin-bottom: 4px; }
+    .command-desc { color: #555; margin-top: 4px; }
+    .command-example { color: #666; font-size: 0.9em; margin-top: 8px; font-family: 'Courier New', monospace; }
+    .aliases { color: #888; font-size: 0.85em; margin-top: 4px; }
+    .note { background: #fff3cd; padding: 12px; border-radius: 6px; margin: 16px 0; border-left: 4px solid #ffc107; }
+    .note-title { font-weight: bold; color: #856404; margin-bottom: 4px; }
+    ul { margin: 8px 0; padding-left: 24px; }
+    li { margin: 4px 0; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.9em; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>@bot コマンド一覧</h1>
+  <p>LINE Botで使用できるコマンドの一覧です。</p>
+
+  <h2>基本的な使い方</h2>
+  
+  <div class="command">
+    <div class="command-name">@bot 家事報告</div>
+    
+    <div class="command-desc">登録されているタスク名を入力すると、その家事を報告できます。タスク名の後にメモを追加することもできます。タスク名はかな/英語/タイプミス1文字まで自動補正されます。</div>
+    
+    <div class="command-example">例: @bot 皿洗い または @bot 皿洗い 15分</div>
+    
+  </div>
+  
+  <div class="command">
+    <div class="command-name">@bot me</div>
+    
+    <div class="command-desc">今週の自分のポイントと内訳を表示します。</div>
+    
+    <div class="command-example">例: @bot me</div>
+    
+  </div>
+  
+  <div class="command">
+    <div class="command-name">@bot top</div>
+    
+    <div class="command-desc">今週のグループ内ポイントランキングを表示します。</div>
+    
+    <div class="command-example">例: @bot top</div>
+    
+  </div>
+  
+  <div class="command">
+    <div class="command-name">@bot 取消</div>
+    
+    <div class="aliases">別名: 取り消し, キャンセル, cancel</div>
+    
+    <div class="command-desc">直前の報告を取り消します。</div>
+    
+    <div class="command-example">例: @bot 取消</div>
+    
+  </div>
+  
+
+  <h2>タスク管理</h2>
+  
+  <div class="command">
+    <div class="command-name">@bot task</div>
+    
+    <div class="aliases">別名: tasks</div>
+    
+    <div class="command-desc">登録されているタスク一覧とポイントを表示します。</div>
+    
+    
+    <div class="command-example">例: @bot task</div>
+    
+  </div>
+  
+  <div class="command">
+    <div class="command-name">@bot add</div>
+    
+    <div class="command-desc">新しいタスクを追加します。</div>
+    
+    <div class="command-example">使い方: @bot add タスク名 ポイント</div>
+    
+    
+    <div class="command-example">例: @bot add 掃除機がけ 150</div>
+    
+  </div>
+  
+  <div class="command">
+    <div class="command-name">@bot delete</div>
+    
+    <div class="command-desc">登録されているタスクを削除します。登録されているタスク名と同じ表記のときだけ削除できます。</div>
+    
+    <div class="command-example">使い方: @bot delete タスク名</div>
+    
+    
+    <div class="command-example">例: @bot delete 掃除機がけ</div>
+    
+  </div>
+  
+
+  <h2>一時タスク</h2>
+  <div class="command">
+    <div class="command-name">✨ @bot temp</div>
+    <div class="command-desc">一時タスクでポイントを追加します。タスク登録不要で、その場でポイントを追加できます。</div>
+    <div class="command-example">使い方: @bot temp タスク名 ポイント</div>
+    <div class="command-example">例: @bot temp 買い物 100</div>
+  </div>
+
+  <h2>ヘルプ</h2>
+  <div class="command">
+    <div class="command-name">@bot help</div>
+    <div class="command-desc">このコマンド一覧をLINE上で表示します。</div>
+    <div class="command-example">例: @bot help</div>
+  </div>
+
+  <div class="note">
+    <div class="note-title">💡 便利な機能</div>
+    <ul>
+      <li>タスク名はかな/英語/タイプミス1文字まで自動補正されます</li>
+      <li>家事報告時にメモを追加できます（例: @bot 皿洗い 15分）</li>
+      <li>タスク名の大文字小文字は区別されません</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>最終更新: 自動生成</p>
+  </div>
+</body>
+</html>

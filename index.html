@@ -53,30 +53,30 @@
   <h1>Chores Contributor Documentation</h1>
   <p>このサイトでは、Chores Contributor Bot の公開ドキュメントを閲覧できます。</p>
 
+  
   <h2>📘 コマンド一覧</h2>
   <div class="link-box">
     <a href="commands.html">▶ @bot コマンド一覧（自動生成）</a>
   </div>
+  
 
+  
   <h2>🧹 タスク一覧（自動更新）</h2>
   <p>週1回、自動的に Supabase の prod DB からタスク定義を取得しています。</p>
-
   <div class="link-box">
-    <a href="tasks-C0e8e4ec5283e5e27488d5d738f11c40c.html">▶ タスク一覧（メイングループ）</a>
+    <a href="tasks.html">▶ タスク一覧（メイングループ）</a>
   </div>
+  
 
-  <!-- 将来、追加した group_id をここに足していく -->
-  <!--
-  <div class="link-box">
-    <a href="tasks-XXXXXXXXXX.html">▶ タスク一覧（別グループ）</a>
-  </div>
-  -->
+  
 
   <h2>🔧 自動生成について</h2>
   <p>
     ・ <strong>commands.html</strong> → GitHub Actions が router.go を元に生成  
     <br />
-    ・ <strong>tasks-*.html</strong> → Supabase prod DB から定期取得  
+    ・ <strong>tasks.html</strong> → Supabase prod DB から定期取得  
+    <br />
+    ・ <strong>ranking.html</strong> → 週1回、Supabase prod DB からランキングを取得
     <br />
     ・ GitHub Actions により公開リポジトリへ自動コミット
   </p>
