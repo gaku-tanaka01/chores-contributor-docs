@@ -5,20 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@bot コマンド一覧</title>
   <style>
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; padding: 24px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-    h1 { font-size: 28px; margin-bottom: 8px; color: #333; }
-    h2 { font-size: 20px; margin-top: 32px; margin-bottom: 16px; color: #555; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; }
-    h3 { font-size: 16px; margin-top: 24px; margin-bottom: 12px; color: #666; }
-    .command { background: #f8f9fa; padding: 12px; border-radius: 6px; margin: 12px 0; border-left: 4px solid #4285f4; }
-    .command-name { font-weight: bold; color: #1a73e8; font-size: 16px; margin-bottom: 4px; }
-    .command-desc { color: #555; margin-top: 4px; }
-    .command-example { color: #666; font-size: 0.9em; margin-top: 8px; font-family: 'Courier New', monospace; }
-    .aliases { color: #888; font-size: 0.85em; margin-top: 4px; }
-    .note { background: #fff3cd; padding: 12px; border-radius: 6px; margin: 16px 0; border-left: 4px solid #ffc107; }
-    .note-title { font-weight: bold; color: #856404; margin-bottom: 4px; }
-    ul { margin: 8px 0; padding-left: 24px; }
-    li { margin: 4px 0; }
-    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.9em; text-align: center; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      color: #555;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 16px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      color: #666;
+    }
+    .command {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 6px;
+      margin: 12px 0;
+      border-left: 4px solid #4285f4;
+    }
+    .command-name {
+      font-weight: bold;
+      color: #1a73e8;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .command-desc {
+      color: #555;
+      margin-top: 4px;
+    }
+    .command-example {
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 8px;
+      font-family: 'Courier New', monospace;
+    }
+    .aliases {
+      color: #888;
+      font-size: 0.85em;
+      margin-top: 4px;
+    }
+    .note {
+      background: #fff3cd;
+      padding: 12px;
+      border-radius: 6px;
+      margin: 16px 0;
+      border-left: 4px solid #ffc107;
+    }
+    .note-title {
+      font-weight: bold;
+      color: #856404;
+      margin-bottom: 4px;
+    }
+    ul {
+      margin: 8px 0;
+      padding-left: 24px;
+    }
+    li {
+      margin: 4px 0;
+    }
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #e0e0e0;
+      color: #888;
+      font-size: 0.9em;
+      text-align: center;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #0b0d12;
+        color: #e5e7eb;
+      }
+      h1 {
+        color: #e5e7eb;
+      }
+      h2 {
+        color: #cbd5e0;
+        border-bottom-color: #2d3748;
+      }
+      h3 {
+        color: #9ca3af;
+      }
+      .command {
+        background: #1f2937;
+        border-left-color: #60a5fa;
+      }
+      .command-name {
+        color: #60a5fa;
+      }
+      .command-desc {
+        color: #cbd5e0;
+      }
+      .command-example {
+        color: #9ca3af;
+      }
+      .aliases {
+        color: #6b7280;
+      }
+      .note {
+        background: #2d2416;
+        border-left-color: #fbbf24;
+      }
+      .note-title {
+        color: #fbbf24;
+      }
+      .footer {
+        border-top-color: #2d3748;
+        color: #9ca3af;
+      }
+    }
   </style>
 </head>
 <body>
