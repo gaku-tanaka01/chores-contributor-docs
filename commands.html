@@ -3,245 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@bot コマンド一覧</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 24px;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-      color: #333;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
-      color: #333;
-    }
-    h2 {
-      font-size: 20px;
-      margin-top: 32px;
-      margin-bottom: 16px;
-      color: #555;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 8px;
-    }
-    h3 {
-      font-size: 16px;
-      margin-top: 24px;
-      margin-bottom: 12px;
-      color: #666;
-    }
-    .command {
-      background: #f8f9fa;
-      padding: 12px;
-      border-radius: 6px;
-      margin: 12px 0;
-      border-left: 4px solid #4285f4;
-    }
-    .command-name {
-      font-weight: bold;
-      color: #1a73e8;
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
-    .command-desc {
-      color: #555;
-      margin-top: 4px;
-    }
-    .command-example {
-      color: #666;
-      font-size: 0.9em;
-      margin-top: 8px;
-      font-family: 'Courier New', monospace;
-    }
-    .aliases {
-      color: #888;
-      font-size: 0.85em;
-      margin-top: 4px;
-    }
-    .note {
-      background: #fff3cd;
-      padding: 12px;
-      border-radius: 6px;
-      margin: 16px 0;
-      border-left: 4px solid #ffc107;
-    }
-    .note-title {
-      font-weight: bold;
-      color: #856404;
-      margin-bottom: 4px;
-    }
-    ul {
-      margin: 8px 0;
-      padding-left: 24px;
-    }
-    li {
-      margin: 4px 0;
-    }
-    .footer {
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid #e0e0e0;
-      color: #888;
-      font-size: 0.9em;
-      text-align: center;
-    }
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #0b0d12;
-        color: #e5e7eb;
-      }
-      h1 {
-        color: #e5e7eb;
-      }
-      h2 {
-        color: #cbd5e0;
-        border-bottom-color: #2d3748;
-      }
-      h3 {
-        color: #9ca3af;
-      }
-      .command {
-        background: #1f2937;
-        border-left-color: #60a5fa;
-      }
-      .command-name {
-        color: #60a5fa;
-      }
-      .command-desc {
-        color: #cbd5e0;
-      }
-      .command-example {
-        color: #9ca3af;
-      }
-      .aliases {
-        color: #6b7280;
-      }
-      .note {
-        background: #2d2416;
-        border-left-color: #fbbf24;
-      }
-      .note-title {
-        color: #fbbf24;
-      }
-      .footer {
-        border-top-color: #2d3748;
-        color: #9ca3af;
-      }
-    }
-  </style>
+  <title>@家事貢献記録bot コマンド一覧</title>
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>@bot コマンド一覧</h1>
-  <p>LINE Botで使用できるコマンドの一覧です。</p>
+<body class="max-w-3xl mx-auto p-6 text-slate-800 dark:text-slate-200 dark:bg-slate-900">
+  <h1 class="text-3xl font-bold mb-2 text-slate-900 dark:text-slate-100">@家事貢献記録bot コマンド一覧</h1>
+  <p class="text-slate-600 dark:text-slate-300 mb-6">LINE Botで使用できるコマンドの一覧です。</p>
 
-  <h2>基本的な使い方</h2>
+  <h2 class="text-xl mt-8 mb-4 pb-2 border-b-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">基本的な使い方</h2>
   
-  <div class="command">
-    <div class="command-name">@bot 家事報告</div>
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot 家事報告</div>
     
-    <div class="command-desc">登録されているタスク名を入力すると、その家事を報告できます。タスク名の後にメモを追加することもできます。タスク名はかな/英語/タイプミス1文字まで自動補正されます。</div>
+    <div class="text-slate-600 dark:text-slate-300 mt-1">登録されているタスク名を入力すると、その家事を報告できます。タスク名の後にメモを追加することもできます。タスク名はかな/英語/タイプミス1文字まで自動補正されます。</div>
     
-    <div class="command-example">例: @bot 皿洗い または @bot 皿洗い 15分</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot 皿洗い または @家事貢献記録bot 皿洗い 15分</div>
     
   </div>
   
-  <div class="command">
-    <div class="command-name">@bot me</div>
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot me</div>
     
-    <div class="command-desc">今週の自分のポイントと内訳を表示します。</div>
+    <div class="text-slate-600 dark:text-slate-300 mt-1">今週の自分のポイントと内訳を表示します。</div>
     
-    <div class="command-example">例: @bot me</div>
-    
-  </div>
-  
-  <div class="command">
-    <div class="command-name">@bot top</div>
-    
-    <div class="command-desc">今週のグループ内ポイントランキングを表示します。</div>
-    
-    <div class="command-example">例: @bot top</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot me</div>
     
   </div>
   
-  <div class="command">
-    <div class="command-name">@bot 取消</div>
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot top</div>
     
-    <div class="aliases">別名: 取り消し, キャンセル, cancel</div>
+    <div class="text-slate-600 dark:text-slate-300 mt-1">今週のグループ内ポイントランキングを表示します。</div>
     
-    <div class="command-desc">直前の報告を取り消します。</div>
-    
-    <div class="command-example">例: @bot 取消</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot top</div>
     
   </div>
   
-
-  <h2>タスク管理</h2>
-  
-  <div class="command">
-    <div class="command-name">@bot task</div>
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot 取消</div>
     
-    <div class="aliases">別名: tasks</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-1">別名: 取り消し, キャンセル, cancel</div>
     
-    <div class="command-desc">登録されているタスク一覧とポイントを表示します。</div>
+    <div class="text-slate-600 dark:text-slate-300 mt-1">直前の報告を取り消します。</div>
     
-    
-    <div class="command-example">例: @bot task</div>
-    
-  </div>
-  
-  <div class="command">
-    <div class="command-name">@bot add</div>
-    
-    <div class="command-desc">新しいタスクを追加します。</div>
-    
-    <div class="command-example">使い方: @bot add タスク名 ポイント</div>
-    
-    
-    <div class="command-example">例: @bot add 掃除機がけ 150</div>
-    
-  </div>
-  
-  <div class="command">
-    <div class="command-name">@bot delete</div>
-    
-    <div class="command-desc">登録されているタスクを削除します。登録されているタスク名と同じ表記のときだけ削除できます。</div>
-    
-    <div class="command-example">使い方: @bot delete タスク名</div>
-    
-    
-    <div class="command-example">例: @bot delete 掃除機がけ</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot 取消</div>
     
   </div>
   
 
-  <h2>一時タスク</h2>
-  <div class="command">
-    <div class="command-name">✨ @bot temp</div>
-    <div class="command-desc">一時タスクでポイントを追加します。タスク登録不要で、その場でポイントを追加できます。</div>
-    <div class="command-example">使い方: @bot temp タスク名 ポイント</div>
-    <div class="command-example">例: @bot temp 買い物 100</div>
+  <h2 class="text-xl mt-8 mb-4 pb-2 border-b-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">タスク管理</h2>
+  
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot task</div>
+    
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-1">別名: tasks</div>
+    
+    <div class="text-slate-600 dark:text-slate-300 mt-1">登録されているタスク一覧とポイントを表示します。</div>
+    
+    
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot task</div>
+    
+  </div>
+  
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot add</div>
+    
+    <div class="text-slate-600 dark:text-slate-300 mt-1">新しいタスクを追加します。</div>
+    
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">使い方: @家事貢献記録bot add タスク名 ポイント</div>
+    
+    
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot add 掃除機がけ 150</div>
+    
+  </div>
+  
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot delete</div>
+    
+    <div class="text-slate-600 dark:text-slate-300 mt-1">登録されているタスクを削除します。登録されているタスク名と同じ表記のときだけ削除できます。</div>
+    
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">使い方: @家事貢献記録bot delete タスク名</div>
+    
+    
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot delete 掃除機がけ</div>
+    
+  </div>
+  
+
+  <h2 class="text-xl mt-8 mb-4 pb-2 border-b-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">一時タスク</h2>
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">✨ @家事貢献記録bot temp</div>
+    <div class="text-slate-600 dark:text-slate-300 mt-1">一時タスクでポイントを追加します。タスク登録不要で、その場でポイントを追加できます。</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">使い方: @家事貢献記録bot temp タスク名 ポイント</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot temp 買い物 100</div>
   </div>
 
-  <h2>ヘルプ</h2>
-  <div class="command">
-    <div class="command-name">@bot help</div>
-    <div class="command-desc">このコマンド一覧をLINE上で表示します。</div>
-    <div class="command-example">例: @bot help</div>
+  <h2 class="text-xl mt-8 mb-4 pb-2 border-b-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">ヘルプ</h2>
+  <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg my-3 border-l-4 border-blue-500 dark:border-blue-400">
+    <div class="font-bold text-blue-600 dark:text-blue-400 text-base mb-1">@家事貢献記録bot help</div>
+    <div class="text-slate-600 dark:text-slate-300 mt-1">このコマンド一覧をLINE上で表示します。</div>
+    <div class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-mono">例: @家事貢献記録bot help</div>
   </div>
 
-  <div class="note">
-    <div class="note-title">💡 便利な機能</div>
-    <ul>
-      <li>タスク名はかな/英語/タイプミス1文字まで自動補正されます</li>
-      <li>家事報告時にメモを追加できます（例: @bot 皿洗い 15分）</li>
-      <li>タスク名の大文字小文字は区別されません</li>
+  <div class="bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg my-4 border-l-4 border-amber-400 dark:border-amber-500">
+    <div class="font-bold text-amber-800 dark:text-amber-300 mb-1">💡 便利な機能</div>
+    <ul class="my-2 ml-6 list-disc">
+      <li class="my-1">タスク名はかな/英語/タイプミス1文字まで自動補正されます</li>
+      <li class="my-1">家事報告時にメモを追加できます（例: @家事貢献記録bot 皿洗い 15分）</li>
+      <li class="my-1">タスク名の大文字小文字は区別されません</li>
     </ul>
   </div>
 
-  <div class="footer">
+  <div class="text-center mt-12 pt-6 text-sm text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-700">
     <p>最終更新: 自動生成</p>
   </div>
 </body>

@@ -4,146 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>俺のグループ のタスク一覧</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 24px;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-      color: #333;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
-      color: #333;
-    }
-    p {
-      margin: 4px 0 16px;
-      color: #555;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 16px;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px 12px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background: #f5f5f5;
-      font-weight: 600;
-    }
-    tbody tr:nth-child(even) {
-      background: #f8f9fa;
-    }
-    .aliases {
-      color: #555;
-      font-size: 0.9em;
-    }
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #0b0d12;
-        color: #e5e7eb;
-      }
-      h1 {
-        color: #e5e7eb;
-      }
-      p {
-        color: #cbd5e0;
-      }
-      table {
-        border-color: #2d3748;
-      }
-      th, td {
-        border-color: #2d3748;
-      }
-      th {
-        background: #1f2937;
-      }
-      tbody tr:nth-child(even) {
-        background: #111827;
-      }
-      .aliases {
-        color: #9ca3af;
-      }
-    }
-  </style>
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>グループ 俺のグループ のタスク一覧</h1>
-  <table>
+<body class="max-w-3xl mx-auto p-6 text-slate-800 dark:text-slate-200 dark:bg-slate-900">
+  <h1 class="text-3xl font-bold mb-3 text-slate-900 dark:text-slate-100">俺のグループ のタスク一覧</h1>
+  <table class="w-full mt-4 border-collapse border border-slate-300 dark:border-slate-600">
     <thead>
       <tr>
-        <th>タスク名</th>
-        <th>ポイント</th>
-        <th>エイリアス</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">タスク名</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">ポイント</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">エイリアス</th>
       </tr>
     </thead>
     <tbody>
     
-      <tr>
-        <td>ごはん作り</td>
-        <td>300</td>
-        <td class="aliases">ごはんづくり, ごはん作り, ご飯づくり, ご飯作り, 夕飯, 料理, 晩ご飯, 調理</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">ごはん作り</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">300</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">ごはんづくり, ごはん作り, ご飯づくり, ご飯作り, 夕飯, 料理, 晩ご飯, 調理</td>
       </tr>
     
-      <tr>
-        <td>ゴミ出し</td>
-        <td>100</td>
-        <td class="aliases">ごみ, ゴミ, ごみだし, ゴミ出し</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">ゴミ出し</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">100</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">ごみ, ゴミ, ごみだし, ゴミ出し</td>
       </tr>
     
-      <tr>
-        <td>トイレ掃除</td>
-        <td>400</td>
-        <td class="aliases">といれ, トイレ, といれそうじ, トイレそうじ, トイレ掃除, トイレ清掃</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">トイレ掃除</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">400</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">といれ, トイレ, といれそうじ, トイレそうじ, トイレ掃除, トイレ清掃</td>
       </tr>
     
-      <tr>
-        <td>床掃除</td>
-        <td>200</td>
-        <td class="aliases">ゆか, ゆかそうじ, 床, 床掃除, 床清掃</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">床掃除</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">200</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">ゆか, ゆかそうじ, 床, 床掃除, 床清掃</td>
       </tr>
     
-      <tr>
-        <td>洗濯(ドラム式)</td>
-        <td>100</td>
-        <td class="aliases">せんたく, せんたくもの, せんたく物, 洗濯, 洗濯物</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">洗濯(ドラム式)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">100</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">せんたく, せんたくもの, せんたく物, 洗濯, 洗濯物</td>
       </tr>
     
-      <tr>
-        <td>洗面台掃除</td>
-        <td>200</td>
-        <td class="aliases">せんめんだい, せんめんだいそうじ, 洗面台, 洗面台掃除, 洗面台清掃</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">洗面台掃除</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">200</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">せんめんだい, せんめんだいそうじ, 洗面台, 洗面台掃除, 洗面台清掃</td>
       </tr>
     
-      <tr>
-        <td>皿洗い</td>
-        <td>180</td>
-        <td class="aliases">さらあらい, 洗いもの, 洗い物, 皿洗い</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">皿洗い</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">180</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">さらあらい, 洗いもの, 洗い物, 皿洗い</td>
       </tr>
     
-      <tr>
-        <td>買い出し</td>
-        <td>250</td>
-        <td class="aliases">かいもの, 買いもの, 買い出し, 買い物, 買出し</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">買い出し</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">250</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">かいもの, 買いもの, 買い出し, 買い物, 買出し</td>
       </tr>
     
-      <tr>
-        <td>風呂掃除</td>
-        <td>150</td>
-        <td class="aliases">ふろ, ふろそうじ, 風呂, 風呂掃除, 風呂清掃</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">風呂掃除</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">150</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">ふろ, ふろそうじ, 風呂, 風呂掃除, 風呂清掃</td>
       </tr>
     
-      <tr>
-        <td>風呂排水溝</td>
-        <td>300</td>
-        <td class="aliases">排水溝風呂, 風呂の排水溝, 風呂排水溝</td>
+      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">風呂排水溝</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top">300</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-600 dark:text-slate-400 text-sm">排水溝風呂, 風呂の排水溝, 風呂排水溝</td>
       </tr>
     
     </tbody>
