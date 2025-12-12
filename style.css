@@ -1,12 +1,300 @@
-/* 共通スタイル - Tailwindで表現しづらい微調整用 */
+/* =========================
+ * Atlassian-style Design System
+ * ========================= */
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.7;
+/* ---- Colors ---- */
+:root {
+  --atl-blue: #0052CC;
+  --atl-blue-hover: #0065FF;
+  --atl-blue-light: #DEEBFF;
+
+  --atl-neutral: #172B4D;
+  --atl-neutral-light: #6B778C;
+  --atl-neutral-lighter: #DFE1E6;
+  --atl-neutral-lightest: #F4F5F7;
+
+  --atl-bg: #FFFFFF;
+  --atl-bg-dark: #0D1424;
+  --atl-surface-dark: #1D2125;
+
+  --atl-flag-bg: #FFF4E5;
+  --atl-flag-border: #FF991F;
 }
 
-/* ダークモード対応 */
+/* ダークモード（OS設定を尊重） */
 @media (prefers-color-scheme: dark) {
-  /* Tailwindのdark:クラスで対応できるものはそちらを使用 */
-  /* ここにはTailwindで表現しづらい細かい調整のみ */
+  :root {
+    --atl-bg: var(--atl-bg-dark);
+  }
+}
+
+/* ---- Typography ---- */
+body.atl-page {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: var(--atl-neutral);
+  background: var(--atl-bg);
+}
+
+@media (min-width: 768px) {
+  body.atl-page {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.atl-main {
+  /* 中央寄せ + ちょい広め */
+}
+
+.atl-page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.atl-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--atl-neutral-lighter);
+}
+
+.atl-text-muted {
+  color: var(--atl-neutral-light);
+}
+
+.atl-text-body {
+  color: #42526E;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.atl-page {
+    color: #B3BAC5;
+  }
+
+  .atl-page-title,
+  .atl-section-title {
+    color: #FFFFFF;
+    border-bottom-color: #38414A;
+  }
+
+  .atl-text-muted {
+    color: #8C9CB8;
+  }
+
+  .atl-text-body {
+    color: #B3BAC5;
+  }
+}
+
+/* ---- Common Layout ---- */
+.atl-header {
+  margin-bottom: 2rem;
+}
+
+.atl-section {
+  margin-bottom: 2.5rem;
+}
+
+/* ---- Boxes ---- */
+.atl-box {
+  background: #FFFFFF;
+  border: 1px solid var(--atl-neutral-lighter);
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin: 8px 0;
+}
+
+.atl-box--accent {
+  border-left: 4px solid var(--atl-blue);
+}
+
+.atl-flag {
+  background: var(--atl-flag-bg);
+  border-left: 4px solid var(--atl-flag-border);
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+.atl-link-box {
+  background: var(--atl-neutral-lightest);
+  border-left: 4px solid var(--atl-blue);
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  transition: background-color 0.2s ease;
+}
+
+.atl-link-box:hover {
+  background: #EBECF0;
+}
+
+/* Dark variants */
+@media (prefers-color-scheme: dark) {
+  .atl-box {
+    background: var(--atl-surface-dark);
+    border-color: #38414A;
+  }
+
+  .atl-box--accent {
+    border-left-color: #2684FF;
+  }
+
+  .atl-flag {
+    background: rgba(255, 153, 31, 0.1);
+  }
+
+  .atl-link-box {
+    background: #22272B;
+    border-left-color: #2684FF;
+  }
+
+  .atl-link-box:hover {
+    background: #2C333A;
+  }
+}
+
+/* ---- Links ---- */
+a.atl-link {
+  color: var(--atl-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.atl-link:hover {
+  color: var(--atl-blue-hover);
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  a.atl-link {
+    color: #2684FF;
+  }
+
+  a.atl-link:hover {
+    color: #4C9AFF;
+  }
+}
+
+/* ---- Code ---- */
+.atl-code {
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+  font-size: 0.875rem;
+  background: var(--atl-neutral-lightest);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.atl-code-block {
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+  font-size: 0.875rem;
+  background: var(--atl-neutral-lightest);
+  padding: 8px 12px;
+  border-radius: 3px;
+  display: block;
+  margin-top: 4px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+@media (prefers-color-scheme: dark) {
+  .atl-code {
+    background: #1D2125;
+    color: #B3BAC5;
+  }
+
+  .atl-code-block {
+    background: #1D2125;
+    color: #B3BAC5;
+  }
+}
+
+/* ---- Table ---- */
+.atl-table-wrapper {
+  overflow-x: auto;
+}
+
+.atl-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.atl-table th {
+  background: var(--atl-neutral-lightest);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--atl-neutral-lighter);
+}
+
+.atl-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--atl-neutral-lighter);
+  vertical-align: top;
+}
+
+.atl-table tbody tr:nth-child(even) {
+  background: var(--atl-neutral-lightest);
+}
+
+.atl-table tbody tr:hover {
+  background: #F4F5F7;
+}
+
+.atl-table-row--champion {
+  background: var(--atl-flag-bg) !important;
+  border-left: 4px solid var(--atl-flag-border);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .atl-table th {
+    background: #22272B;
+    border-bottom-color: #38414A;
+  }
+
+  .atl-table td {
+    border-bottom-color: #38414A;
+  }
+
+  .atl-table tbody tr:nth-child(even) {
+    background: #1D2125;
+  }
+
+  .atl-table tbody tr:hover {
+    background: #22272B;
+  }
+
+  .atl-table-row--champion {
+    background: rgba(255, 153, 31, 0.1) !important;
+  }
+}
+
+/* ---- Footer / Nav ---- */
+.atl-footer,
+.atl-nav {
+  border-top: 1px solid var(--atl-neutral-lighter);
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  color: var(--atl-neutral-light);
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .atl-footer,
+  .atl-nav {
+    border-top-color: #38414A;
+    color: #8C9CB8;
+  }
 }
