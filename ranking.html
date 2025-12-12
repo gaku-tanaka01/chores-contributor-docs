@@ -1,50 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>作者自身のグループ の週間ランキング</title>
+  <meta charset="UTF-8" />
+  <title>作者自身のグループ の週間ランキング - 家事貢献記録bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   
   <script src="https://cdn.tailwindcss.com"></script>
 
   
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'atlassian-blue': '#0052CC',
+            'atlassian-blue-hover': '#0065FF',
+            'atlassian-blue-light': '#DEEBFF',
+            'atlassian-neutral': '#172B4D',
+            'atlassian-neutral-light': '#6B778C',
+            'atlassian-neutral-lighter': '#DFE1E6',
+            'atlassian-neutral-lightest': '#F4F5F7',
+          }
+        }
+      }
+    }
+  </script>
+
+  
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="max-w-3xl mx-auto p-6 text-slate-800 dark:text-slate-200 dark:bg-slate-900">
-  <h1 class="text-3xl font-bold mb-3 text-slate-900 dark:text-slate-100">作者自身のグループ の週間ランキング</h1>
-  <p class="text-slate-600 dark:text-slate-300 mb-4">集計期間: 2025-12-08 〜 2025-12-14</p>
-  
-  <table class="w-full mt-4 border-collapse border border-slate-300 dark:border-slate-600">
+<body class="atl-page">
+  <main class="atl-main">
+    
+<header class="atl-header">
+  <h1 class="atl-page-title">作者自身のグループ の週間ランキング</h1>
+  <p class="atl-text-muted">集計期間: 2025-12-08 〜 2025-12-14</p>
+</header>
+
+
+<div class="atl-table-wrapper">
+  <table class="atl-table">
     <thead>
       <tr>
-        <th scope="col" class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">順位</th>
-        <th scope="col" class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">名前</th>
-        <th scope="col" class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-left bg-slate-100 dark:bg-slate-800 font-semibold">ポイント</th>
+        <th scope="col">順位</th>
+        <th scope="col">名前</th>
+        <th scope="col">ポイント</th>
       </tr>
     </thead>
     <tbody>
     
-      <tr class="bg-amber-50 dark:bg-amber-900/20 font-bold">
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 border-amber-300 dark:border-amber-600">1</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 border-amber-300 dark:border-amber-600">星瞬</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 border-amber-300 dark:border-amber-600">1160pt</td>
+      <tr class="atl-table-row--champion">
+        <td>1</td>
+        <td>星瞬</td>
+        <td>1160pt</td>
       </tr>
     
-      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">2</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">田中 樂空</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">600pt</td>
+      <tr>
+        <td>2</td>
+        <td>田中 樂空</td>
+        <td>600pt</td>
       </tr>
     
-      <tr class="even:bg-slate-50 dark:even:bg-slate-800/50">
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">3</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">山士家</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2">400pt</td>
+      <tr>
+        <td>3</td>
+        <td>山士家</td>
+        <td>400pt</td>
       </tr>
     
     </tbody>
   </table>
-  
+</div>
+
+
+  </main>
 </body>
 </html>
