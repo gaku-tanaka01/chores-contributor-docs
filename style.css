@@ -32,12 +32,18 @@
 body.atl-page {
   max-width: 64rem;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
   color: var(--atl-neutral);
   background: var(--atl-bg);
+}
+
+@media (min-width: 640px) {
+  body.atl-page {
+    padding: 1.5rem 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -51,21 +57,39 @@ body.atl-page {
 }
 
 .atl-page-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 640px) {
+  .atl-page-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .atl-page-title {
+    font-size: 2rem;
+  }
+}
+
 .atl-section-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.01em;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--atl-neutral-lighter);
+}
+
+@media (min-width: 640px) {
+  .atl-section-title {
+    font-size: 1.25rem;
+  }
 }
 
 .atl-text-muted {
@@ -98,11 +122,23 @@ body.atl-page {
 
 /* ---- Common Layout ---- */
 .atl-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .atl-header {
+    margin-bottom: 2rem;
+  }
 }
 
 .atl-section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .atl-section {
+    margin-bottom: 2.5rem;
+  }
 }
 
 /* ---- Boxes ---- */
@@ -110,8 +146,14 @@ body.atl-page {
   background: #FFFFFF;
   border: 1px solid var(--atl-neutral-lighter);
   border-radius: 3px;
-  padding: 12px 16px;
+  padding: 10px 12px;
   margin: 8px 0;
+}
+
+@media (min-width: 640px) {
+  .atl-box {
+    padding: 12px 16px;
+  }
 }
 
 .atl-box--accent {
@@ -164,6 +206,27 @@ body.atl-page {
   }
 }
 
+/* スマホ用ボックスのパディング調整（ダークモードでも同じ） */
+@media (max-width: 639px) {
+  .atl-flag {
+    padding: 10px 12px;
+  }
+
+  .atl-link-box {
+    padding: 10px 12px;
+  }
+}
+
+@media (min-width: 640px) {
+  .atl-flag {
+    padding: 12px 16px;
+  }
+
+  .atl-link-box {
+    padding: 12px 16px;
+  }
+}
+
 /* ---- Links ---- */
 a.atl-link {
   color: var(--atl-blue);
@@ -197,18 +260,26 @@ a.atl-link:hover {
 
 .atl-code-block {
   font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   background: var(--atl-blue-light);
   color: var(--atl-blue);
   border: 1px solid var(--atl-blue);
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 4px;
   display: block;
   margin-top: 6px;
   white-space: pre-wrap;
-  word-break: break-all;
+  word-break: break-word;
+  overflow-wrap: break-word;
   font-weight: 500;
   line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .atl-code-block {
+    font-size: 0.9375rem;
+    padding: 10px 14px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -227,25 +298,125 @@ a.atl-link:hover {
 /* ---- Table ---- */
 .atl-table-wrapper {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.atl-table {
-  width: 100%;
-  border-collapse: collapse;
+/* スマホではテーブルをカード形式に */
+@media (max-width: 639px) {
+  .atl-table-wrapper {
+    overflow-x: visible;
+  }
+
+  .atl-table,
+  .atl-table thead,
+  .atl-table tbody,
+  .atl-table th,
+  .atl-table td,
+  .atl-table tr {
+    display: block;
+  }
+
+  .atl-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .atl-table tr {
+    border: 1px solid var(--atl-neutral-lighter);
+    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: #FFFFFF;
+  }
+
+  .atl-table td {
+    border: none;
+    position: relative;
+    padding: 8px 8px 8px 40%;
+    text-align: left;
+  }
+
+  .atl-table td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 8px;
+    width: 35%;
+    font-weight: 600;
+    color: var(--atl-neutral);
+  }
+
+  .atl-table td:first-child {
+    padding-top: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--atl-neutral-lighter);
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+  }
+
+  .atl-table td:first-child:before {
+    display: none;
+  }
 }
 
-.atl-table th {
-  background: var(--atl-neutral-lightest);
-  font-weight: 600;
-  text-align: left;
-  padding: 12px 16px;
-  border-bottom: 2px solid var(--atl-neutral-lighter);
+/* スマホ用テーブルのダークモード対応 */
+@media (max-width: 639px) and (prefers-color-scheme: dark) {
+  .atl-table tr {
+    background: var(--atl-surface-dark);
+    border-color: #38414A;
+  }
+
+  .atl-table td:before {
+    color: #B3BAC5;
+  }
+
+  .atl-table td:first-child {
+    border-bottom-color: #38414A;
+    color: #FFFFFF;
+  }
+
+  .atl-table td {
+    color: #B3BAC5;
+  }
 }
 
-.atl-table td {
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--atl-neutral-lighter);
-  vertical-align: top;
+@media (min-width: 640px) {
+  .atl-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+  }
+
+  .atl-table thead,
+  .atl-table tbody,
+  .atl-table th,
+  .atl-table td,
+  .atl-table tr {
+    display: table-row;
+  }
+
+  .atl-table th,
+  .atl-table td {
+    display: table-cell;
+  }
+
+  .atl-table th {
+    background: var(--atl-neutral-lightest);
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--atl-neutral-lighter);
+  }
+
+  .atl-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--atl-neutral-lighter);
+    vertical-align: top;
+  }
+
+  .atl-table td:before {
+    display: none;
+  }
 }
 
 .atl-table tbody tr:nth-child(even) {
