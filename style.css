@@ -392,14 +392,60 @@ a.atl-link:hover {
 /* ---- Table ---- */
 .atl-table-wrapper {
   width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   background: transparent;
+  box-sizing: border-box;
 }
 
 .atl-table {
   width: 100%;
+  min-width: 0;
+}
+
+.atl-table:not(.atl-ranking-table) {
   table-layout: fixed;
+}
+
+.atl-table:not(.atl-ranking-table) th,
+.atl-table:not(.atl-ranking-table) td {
+  width: 50%;
+}
+
+.atl-table-no-card tbody tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.atl-table-no-card tbody td {
+  flex: 1;
+  min-width: 0;
+}
+
+.atl-table-no-card tbody td:first-child {
+  padding-right: 1rem;
+}
+
+.atl-table-no-card tbody td:last-child {
+  text-align: right;
+}
+
+.atl-table-no-card thead tr {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.atl-table-no-card thead th {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  padding: 12px 16px;
 }
 
 /* スマホではテーブルをカード形式に（ランキングテーブルは除く） */
@@ -486,27 +532,30 @@ a.atl-link:hover {
 }
 
 /* スマホ用テーブルのダークモード対応（ランキングテーブルは除く） */
+.atl-table:not(.atl-table-no-card) {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 @media (min-width: 640px) {
-  .atl-table {
-    width: 100%;
-    border-collapse: collapse;
+  .atl-table:not(.atl-table-no-card) {
     display: table;
   }
 
-  .atl-table thead,
-  .atl-table tbody,
-  .atl-table th,
-  .atl-table td,
-  .atl-table tr {
+  .atl-table:not(.atl-table-no-card) thead,
+  .atl-table:not(.atl-table-no-card) tbody,
+  .atl-table:not(.atl-table-no-card) th,
+  .atl-table:not(.atl-table-no-card) td,
+  .atl-table:not(.atl-table-no-card) tr {
     display: table-row;
   }
 
-  .atl-table th,
-  .atl-table td {
+  .atl-table:not(.atl-table-no-card) th,
+  .atl-table:not(.atl-table-no-card) td {
     display: table-cell;
   }
 
-  .atl-table th {
+  .atl-table:not(.atl-table-no-card) th {
     background: var(--atl-neutral-lightest);
     font-weight: 600;
     text-align: left;
@@ -514,22 +563,22 @@ a.atl-link:hover {
     border-bottom: 2px solid var(--atl-neutral-lighter);
   }
 
-  .atl-table td {
+  .atl-table:not(.atl-table-no-card) td {
     padding: 12px 16px;
     border-bottom: 1px solid var(--atl-neutral-lighter);
     vertical-align: top;
   }
 
-  .atl-table td:before {
+  .atl-table:not(.atl-table-no-card) td:before {
     display: none;
   }
 }
 
-.atl-table tbody tr:nth-child(even) {
+.atl-table:not(.atl-table-no-card):not(.atl-ranking-table) tbody tr:nth-child(even) {
   background: var(--atl-neutral-lightest);
 }
 
-.atl-table tbody tr:hover {
+.atl-table:not(.atl-table-no-card):not(.atl-ranking-table) tbody tr:hover {
   background: #F4F5F7;
 }
 
@@ -537,6 +586,18 @@ a.atl-link:hover {
   background: var(--atl-flag-bg) !important;
   border-left: 4px solid var(--atl-flag-border);
   font-weight: 600;
+}
+
+.atl-ranking-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.atl-ranking-table thead th,
+.atl-ranking-table tbody td {
+  width: calc(100% / 3);
+  text-align: left;
+  box-sizing: border-box;
 }
 
 
