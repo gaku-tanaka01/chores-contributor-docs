@@ -448,6 +448,18 @@ a.atl-link:hover {
   padding: 12px 16px;
 }
 
+.atl-table-no-card thead {
+  border: 1px solid var(--atl-neutral-lighter);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  background: var(--atl-neutral-lightest);
+}
+
+.atl-table-no-card tbody tr {
+  border: 1px solid var(--atl-neutral-lighter);
+  border-top: none;
+}
+
 /* スマホではテーブルをカード形式に（ランキングテーブルは除く） */
 @media (max-width: 639px) {
   .atl-table-wrapper {
