@@ -35,20 +35,33 @@
   <main class="atl-main">
     
 <header class="atl-header">
-  <h1 class="atl-page-title">@家事貢献記録bot コマンド一覧</h1>
-  <p class="atl-text-muted">LINE Botで使用できるコマンドの一覧です。</p>
+  <div class="atl-hero">
+    <div>
+      <h1 class="atl-page-title">@家事貢献記録bot コマンド一覧</h1>
+      <p class="atl-hero-subtitle">
+        LINEで使えるコマンドをまとめています。覚えておくと問題解決や調整がスムーズです。
+      </p>
+    </div>
+    <div class="atl-hero-cta">
+      <a class="atl-btn atl-btn--primary" href="index.html">トップへ戻る</a>
+      <a class="atl-btn atl-btn--ghost" href="tasks.html">タスク一覧</a>
+    </div>
+  </div>
 </header>
 
-<section class="atl-section">
-  <h2 id="basic" class="atl-section-title">基本的な使い方</h2>
-  <div class="space-y-3">
+<section class="atl-section" id="basic">
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">基本的な使い方</h2>
+    <p class="atl-text-muted">報告・確認など、毎日使うコマンドをカード形式で整理しました。</p>
+  </div>
+  <div class="atl-feature-grid">
     
-    <div id="家事報告" class="atl-box atl-box--accent">
-      <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot 家事報告</div>
+    <article id="家事報告" class="atl-feature-card">
+      <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot 家事報告</div>
       
-      <div class="atl-text-body mt-2">登録されているタスク名を入力すると、その家事を報告できます。タスク名の後にメモを追加することもできます。タスク名はかな/英語/タイプミス1文字まで自動補正されます。</div>
+      <div class="atl-text-body mb-2">登録されているタスク名を入力すると、その家事を報告できます。タスク名の後にメモを追加することもできます。タスク名はかな/英語/タイプミス1文字まで自動補正されます。</div>
       
-      <div class="mt-3">
+      <div>
         <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
         
         
@@ -59,157 +72,164 @@
         
       </div>
       
-    </div>
+    </article>
     
-    <div id="me" class="atl-box atl-box--accent">
-      <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot me</div>
+    <article id="me" class="atl-feature-card">
+      <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot me</div>
       
-      <div class="atl-text-body mt-2">今週の自分のポイントと内訳を表示します。</div>
+      <div class="atl-text-body mb-2">今週の自分のポイントと内訳を表示します。</div>
       
-      <div class="mt-3">
+      <div>
         <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
         
         <div class="atl-code-block">@家事貢献記録bot me</div>
         
       </div>
       
-    </div>
+    </article>
     
-    <div id="top" class="atl-box atl-box--accent">
-      <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot top</div>
+    <article id="top" class="atl-feature-card">
+      <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot top</div>
       
-      <div class="atl-text-body mt-2">今週のグループ内ポイントランキングを表示します。</div>
+      <div class="atl-text-body mb-2">今週のグループ内ポイントランキングを表示します。</div>
       
-      <div class="mt-3">
+      <div>
         <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
         
         <div class="atl-code-block">@家事貢献記録bot top</div>
         
       </div>
       
-    </div>
+    </article>
     
-    <div id="取消" class="atl-box atl-box--accent">
-      <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot 取消</div>
+    <article id="取消" class="atl-feature-card">
+      <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot 取消</div>
       
-      <div class="atl-text-muted text-sm mt-1">別名: 取り消し, キャンセル, cancel</div>
+      <div class="atl-text-muted text-sm mb-2">別名: 取り消し, キャンセル, cancel</div>
       
-      <div class="atl-text-body mt-2">直前の報告を取り消します。</div>
+      <div class="atl-text-body mb-2">直前の報告を取り消します。</div>
       
-      <div class="mt-3">
+      <div>
         <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
         
         <div class="atl-code-block">@家事貢献記録bot 取消</div>
         
       </div>
       
-    </div>
+    </article>
     
   </div>
 </section>
 
-<section class="atl-section">
-  <h2 id="tasks" class="atl-section-title">タスク管理</h2>
-  <div class="space-y-3">
+<section class="atl-section" id="tasks">
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">タスク管理</h2>
+    <p class="atl-text-muted">タスクを追加・削除・確認するためのコマンドです。</p>
+  </div>
+  <div class="atl-feature-grid">
     
-    <div id="task" class="atl-box atl-box--accent">
-      <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot task</div>
+    <article id="task" class="atl-feature-card">
+      <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot task</div>
       
-      <div class="atl-text-muted text-sm mt-1">別名: tasks</div>
+      <div class="atl-text-muted text-sm mb-2">別名: tasks</div>
       
-      <div class="atl-text-body mt-2">登録されているタスク一覧とポイントを表示します。</div>
+      <div class="atl-text-body mb-2">登録されているタスク一覧とポイントを表示します。</div>
       
       
-      <div class="mt-3">
+      <div>
         <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
         
         <div class="atl-code-block">@家事貢献記録bot task</div>
         
       </div>
       
-    </div>
+    </article>
     
-    <div id="add" class="atl-box atl-box--accent">
-      <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot add</div>
+    <article id="add" class="atl-feature-card">
+      <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot add</div>
       
-      <div class="atl-text-body mt-2">新しいタスクを追加します。</div>
+      <div class="atl-text-body mb-2">新しいタスクを追加します。</div>
       
-      <div class="mt-3">
+      <div class="mb-2">
         <div class="atl-text-muted text-sm font-medium mb-1">使い方:</div>
         <div class="atl-code-block">@家事貢献記録bot add タスク名 ポイント</div>
       </div>
       
       
-      <div class="mt-3">
+      <div>
         <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
         
         <div class="atl-code-block">@家事貢献記録bot add 掃除機がけ 150</div>
         
       </div>
       
-    </div>
+    </article>
     
-    <div id="delete" class="atl-box atl-box--accent">
-      <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot delete</div>
+    <article id="delete" class="atl-feature-card">
+      <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot delete</div>
       
-      <div class="atl-text-body mt-2">登録されているタスクを削除します。登録されているタスク名と同じ表記のときだけ削除できます。</div>
+      <div class="atl-text-body mb-2">登録されているタスクを削除します。登録されているタスク名と同じ表記のときだけ削除できます。</div>
       
-      <div class="mt-3">
+      <div class="mb-2">
         <div class="atl-text-muted text-sm font-medium mb-1">使い方:</div>
         <div class="atl-code-block">@家事貢献記録bot delete タスク名</div>
       </div>
       
       
-      <div class="mt-3">
+      <div>
         <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
         
         <div class="atl-code-block">@家事貢献記録bot delete 掃除機がけ</div>
         
       </div>
       
-    </div>
+    </article>
     
   </div>
 </section>
 
-<section class="atl-section">
-  <h2 id="temp" class="atl-section-title">一時タスク</h2>
-  <div class="atl-box atl-box--accent">
-    <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot temp</div>
-    <div class="atl-text-body mt-2">
-      一時タスクでポイントを追加します。タスク登録不要で、その場でポイントを追加できます。
+<section class="atl-section" id="temp">
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">一時タスク</h2>
+    <p class="atl-text-muted">臨時でポイントを追加したいとき</p>
+  </div>
+  <div class="atl-feature-card atl-feature-card--wide">
+    <div class="font-semibold text-atlassian-blue mb-2">@家事貢献記録bot temp</div>
+    <div class="atl-text-body mb-2">
+      タスク登録不要で、その場でポイントを追加できます。メンバーの突然の手伝いもすぐ記録。
     </div>
-    <div class="mt-3">
-      <div class="atl-text-muted text-sm font-medium mb-1">使い方:</div>
-      <div class="atl-code-block">@家事貢献記録bot temp タスク名 ポイント</div>
-    </div>
-    <div class="mt-3">
-      <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
-      <div class="atl-code-block">@家事貢献記録bot temp 買い物 100</div>
-    </div>
+    <div class="atl-text-muted text-sm font-medium mb-1">使い方:</div>
+    <div class="atl-code-block">@家事貢献記録bot temp タスク名 ポイント</div>
+    <div class="atl-text-muted text-sm font-medium mt-3 mb-1">例:</div>
+    <div class="atl-code-block">@家事貢献記録bot temp 買い物 100</div>
+  </div>
+</section>
+
+<section class="atl-section" id="help">
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">ヘルプ</h2>
+    <p class="atl-text-muted">コマンド一覧を再表示したいときに使います。</p>
+  </div>
+  <div class="atl-flag atl-flag--padded">
+    <div class="font-semibold mb-1">@家事貢献記録bot help</div>
+    <div class="atl-text-body mb-2">このページをLINE上で再表示します。</div>
+    <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
+    <div class="atl-code-block">@家事貢献記録bot help</div>
   </div>
 </section>
 
 <section class="atl-section">
-  <h2 id="help" class="atl-section-title">ヘルプ</h2>
-  <div class="atl-box atl-box--accent">
-    <div class="font-semibold text-atlassian-blue mb-1">@家事貢献記録bot help</div>
-    <div class="atl-text-body mt-2">このコマンド一覧をLINE上で表示します。</div>
-    <div class="mt-3">
-      <div class="atl-text-muted text-sm font-medium mb-1">例:</div>
-      <div class="atl-code-block">@家事貢献記録bot help</div>
+  <div class="atl-link-box">
+    <div class="atl-text-body">
+      <div class="font-semibold mb-1">便利な機能</div>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>タスク名はかな/英語/タイプミス1文字まで自動補正されます</li>
+        <li>家事報告時にメモを追加できます（例: @家事貢献記録bot 皿洗い 15分）</li>
+        <li>タスク名の大文字小文字は区別されません</li>
+      </ul>
     </div>
   </div>
 </section>
-
-<div class="atl-flag">
-  <div class="font-semibold mb-1">便利な機能</div>
-  <ul class="list-disc ml-6 space-y-1 atl-text-body">
-    <li>タスク名はかな/英語/タイプミス1文字まで自動補正されます</li>
-    <li>家事報告時にメモを追加できます（例: @家事貢献記録bot 皿洗い 15分）</li>
-    <li>タスク名の大文字小文字は区別されません</li>
-  </ul>
-</div>
 
   </main>
 </body>

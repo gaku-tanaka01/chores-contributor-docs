@@ -35,21 +35,32 @@
   <main class="atl-main">
     
 <header class="atl-header">
-  <h1 class="atl-page-title">プライバシーポリシー</h1>
-  <p class="atl-text-muted">家事貢献記録bot（以下「本Bot」）のプライバシーポリシーです。</p>
+  <div class="atl-hero">
+    <div>
+      <h1 class="atl-page-title">プライバシーポリシー</h1>
+      <p class="atl-hero-subtitle">
+        どの情報を、どのように扱うのか。安心して利用いただくための指針を整理しています。
+      </p>
+    </div>
+    <div class="atl-hero-cta">
+      <a class="atl-btn atl-btn--primary" href="index.html">トップへ</a>
+      <a class="atl-btn atl-btn--ghost" href="terms.html">利用規約</a>
+    </div>
+  </div>
 </header>
 
-<div class="atl-flag">
+<div class="atl-flag atl-flag--padded">
   <p class="font-semibold mb-1">重要なお知らせ</p>
   <p>本BotはLINE公式ではなく、個人が提供する非公式サービスです。</p>
 </div>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">1. 取得する情報</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">1. 取得する情報</h2>
+    <p class="atl-text-muted">サービス提供に必要な情報のみを収集します。</p>
+  </div>
   <div class="atl-text-body space-y-3">
-    <p>
-      本Botは、以下の情報を取得・保存します。
-    </p>
+    <p>本Botは、以下の情報を取得・保存します。</p>
     <ul class="list-disc ml-6 space-y-1">
       <li>LINEのユーザーID</li>
       <li>参加しているグループのID</li>
@@ -60,11 +71,12 @@
 </section>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">2. 利用目的</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">2. 利用目的</h2>
+    <p class="atl-text-muted">集計・表示・品質向上のために利用します。</p>
+  </div>
   <div class="atl-text-body space-y-3">
-    <p>
-      取得した情報は、以下の目的で利用します。
-    </p>
+    <p>取得した情報は、以下の目的で利用します。</p>
     <ul class="list-disc ml-6 space-y-1">
       <li>家事貢献ポイントの集計・ランキング表示</li>
       <li>タスク定義の管理と表示</li>
@@ -75,12 +87,12 @@
 </section>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">3. 第三者提供</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">3. 第三者提供</h2>
+    <p class="atl-text-muted">原則として提供しませんが、例外もあります。</p>
+  </div>
   <div class="atl-text-body space-y-3">
-    <p>
-      原則として、取得した情報を第三者に提供することはありません。
-      ただし、以下の場合は除きます。
-    </p>
+    <p>原則として、取得した情報を第三者に提供することはありません。以下の場合を除きます。</p>
     <ul class="list-disc ml-6 space-y-1">
       <li>法令に基づく場合</li>
       <li>裁判所、警察等の公的機関から要請があった場合</li>
@@ -90,27 +102,27 @@
 </section>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">4. 外部サービス利用</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">4. 外部サービス利用</h2>
+    <p class="atl-text-muted">外部のクラウドサービスやAPIを組み合わせて運用しています。</p>
+  </div>
   <div class="atl-text-body space-y-3">
-    <p>
-      本Botは、以下の外部サービスを利用しています。
-    </p>
+    <p>本Botは、以下の外部サービスを利用しています。</p>
     <ul class="list-disc ml-6 space-y-1">
       <li>データベース・ホスティング：クラウドサービス（Supabase、Render等）</li>
       <li>メッセージングプラットフォーム：LINE Messaging API</li>
     </ul>
-    <p>
-      これらのサービスは、それぞれのプライバシーポリシーに従ってデータを処理します。
-    </p>
+    <p>これらのサービスは、それぞれのプライバシーポリシーに従ってデータを処理します。</p>
   </div>
 </section>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">5. データの保存期間</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">5. データの保存期間</h2>
+    <p class="atl-text-muted">必要な期間だけ保管します。</p>
+  </div>
   <div class="atl-text-body space-y-3">
-    <p>
-      取得した情報は、以下の期間保存されます。
-    </p>
+    <p>取得した情報は、以下の期間保存されます。</p>
     <ul class="list-disc ml-6 space-y-1">
       <li>グループに参加している間：サービス提供のために必要な期間</li>
       <li>グループ退会後：一定期間はログ保持（不具合対応のため）</li>
@@ -120,28 +132,28 @@
 </section>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">6. ユーザーの権利</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">6. ユーザーの権利</h2>
+    <p class="atl-text-muted">個人情報についての請求に対応します。</p>
+  </div>
   <div class="atl-text-body space-y-3">
-    <p>
-      ユーザーは、以下の権利を有します。
-    </p>
+    <p>ユーザーは、以下の権利を有します。</p>
     <ul class="list-disc ml-6 space-y-1">
       <li>個人情報の開示請求</li>
       <li>個人情報の訂正・削除請求</li>
       <li>データの削除依頼</li>
     </ul>
-    <p>
-      これらの請求・依頼については、お問い合わせ窓口までご連絡ください。
-    </p>
+    <p>これらの請求・依頼については、お問い合わせ窓口までご連絡ください。</p>
   </div>
 </section>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">7. お問い合わせ窓口</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">7. お問い合わせ窓口</h2>
+    <p class="atl-text-muted">お気軽にご相談ください。</p>
+  </div>
   <div class="atl-text-body space-y-3">
-    <p>
-      本ポリシーに関するお問い合わせ、またはデータ削除のご依頼は、以下の窓口までお願いいたします。
-    </p>
+    <p>本ポリシーに関するお問い合わせ、またはデータ削除のご依頼は、以下の窓口までお願いいたします。</p>
     <ul class="list-disc ml-6 space-y-1">
       <li>
         <a href="https://github.com/gaku-tanaka01/chores-contributor-docs/issues" class="atl-link">
@@ -153,7 +165,10 @@
 </section>
 
 <section class="atl-section">
-  <h2 class="atl-section-title">8. ポリシーの変更</h2>
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">8. ポリシーの変更</h2>
+    <p class="atl-text-muted">変更時はこのページで告知します。</p>
+  </div>
   <div class="atl-text-body space-y-3">
     <p>
       本ポリシーは、法令の変更やサービスの改善に伴い、予告なく変更する場合があります。
@@ -165,7 +180,7 @@
 <footer class="atl-footer">
   <p class="mb-2">最終更新日: 2025-12-16</p>
   <nav>
-    <a href="index.html" class="atl-link">トップページに戻る</a>
+    <a href="index.html" class="atl-link">トップ</a>
     <span class="mx-2">/</span>
     <a href="terms.html" class="atl-link">利用規約</a>
   </nav>

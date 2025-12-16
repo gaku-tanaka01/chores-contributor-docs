@@ -22,12 +22,6 @@
 }
 
 /* ダークモード（OS設定を尊重） */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --atl-bg: var(--atl-bg-dark);
-  }
-}
-
 /* ---- Typography ---- */
 body.atl-page {
   max-width: 64rem;
@@ -53,7 +47,9 @@ body.atl-page {
 }
 
 .atl-main {
-  /* 中央寄せ + ちょい広め */
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
 }
 
 .atl-page-title {
@@ -100,26 +96,6 @@ body.atl-page {
   color: #42526E;
 }
 
-@media (prefers-color-scheme: dark) {
-  body.atl-page {
-    color: #B3BAC5;
-  }
-
-  .atl-page-title,
-  .atl-section-title {
-    color: #FFFFFF;
-    border-bottom-color: #38414A;
-  }
-
-  .atl-text-muted {
-    color: #8C9CB8;
-  }
-
-  .atl-text-body {
-    color: #B3BAC5;
-  }
-}
-
 /* ---- Common Layout ---- */
 .atl-header {
   margin-bottom: 1.5rem;
@@ -128,6 +104,77 @@ body.atl-page {
 @media (min-width: 640px) {
   .atl-header {
     margin-bottom: 2rem;
+  }
+}
+
+.atl-hero {
+  border: 1px solid var(--atl-neutral-lighter);
+  border-radius: 10px;
+  padding: 16px;
+  background: var(--atl-neutral-lightest);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.atl-hero-subtitle {
+  font-size: 1rem;
+  color: var(--atl-neutral);
+  max-width: 45ch;
+}
+
+.atl-hero-cta {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.atl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.atl-btn--primary {
+  background: var(--atl-blue);
+  color: #fff;
+  box-shadow: 0 10px 15px rgba(0, 82, 204, 0.2);
+}
+
+.atl-btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 20px rgba(0, 82, 204, 0.25);
+}
+
+.atl-btn--ghost {
+  border: 1px solid var(--atl-blue);
+  color: var(--atl-blue);
+  background: #fff;
+}
+
+.atl-btn--ghost:hover {
+  background: #F4F5F7;
+}
+
+@media (min-width: 640px) {
+  .atl-hero {
+    flex-direction: row;
+    align-items: center;
+  }
+  .atl-hero-cta {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
   }
 }
 
@@ -168,6 +215,10 @@ body.atl-page {
   margin: 16px 0;
 }
 
+.atl-flag--padded {
+  padding: 16px 18px;
+}
+
 .atl-link-box {
   background: var(--atl-neutral-lightest);
   border-left: 4px solid var(--atl-blue);
@@ -181,31 +232,95 @@ body.atl-page {
   background: #EBECF0;
 }
 
-/* Dark variants */
-@media (prefers-color-scheme: dark) {
-  .atl-box {
-    background: var(--atl-surface-dark);
-    border-color: #38414A;
-  }
+.atl-link-box--inline {
+  padding: 12px 16px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
-  .atl-box--accent {
-    border-left-color: #2684FF;
-  }
+.atl-section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
 
-  .atl-flag {
-    background: rgba(255, 153, 31, 0.1);
-  }
+.atl-grid {
+  display: grid;
+}
 
-  .atl-link-box {
-    background: #22272B;
-    border-left-color: #2684FF;
-  }
+.atl-grid--gap {
+  gap: 1rem;
+}
 
-  .atl-link-box:hover {
-    background: #2C333A;
+.atl-box--lift {
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.atl-feature-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.atl-feature-card {
+  background: #fff;
+  border: 1px solid var(--atl-neutral-lighter);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.atl-feature-card--wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 639px) {
+  .atl-feature-card--wide {
+    grid-column: span 1;
   }
 }
 
+.atl-feature-card__eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--atl-neutral);
+  margin-bottom: 0.5rem;
+}
+
+.atl-card-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .atl-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.atl-usecase-card {
+  background: #fff;
+  border: 1px solid var(--atl-neutral-lighter);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.atl-usecase-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.atl-text-note {
+  max-width: 780px;
+  margin-top: 0.75rem;
+}
+
+/* Dark variants */
 /* スマホ用ボックスのパディング調整（ダークモードでも同じ） */
 @media (max-width: 639px) {
   .atl-flag {
@@ -239,15 +354,6 @@ a.atl-link:hover {
   text-decoration: underline;
 }
 
-@media (prefers-color-scheme: dark) {
-  a.atl-link {
-    color: #2684FF;
-  }
-
-  a.atl-link:hover {
-    color: #4C9AFF;
-  }
-}
 
 /* ---- Code ---- */
 .atl-code {
@@ -282,62 +388,64 @@ a.atl-link:hover {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .atl-code {
-    background: #1D2125;
-    color: #B3BAC5;
-  }
-
-  .atl-code-block {
-    background: #22272B;
-    color: #C1C7D0;
-    border-color: #2684FF;
-  }
-}
 
 /* ---- Table ---- */
 .atl-table-wrapper {
+  width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  background: transparent;
 }
 
-/* スマホではテーブルをカード形式に */
+.atl-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* スマホではテーブルをカード形式に（ランキングテーブルは除く） */
 @media (max-width: 639px) {
   .atl-table-wrapper {
     overflow-x: visible;
   }
 
-  .atl-table,
-  .atl-table thead,
-  .atl-table tbody,
-  .atl-table th,
-  .atl-table td,
-  .atl-table tr {
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card),
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) thead,
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) tbody,
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) th,
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) td,
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) tr {
     display: block;
   }
 
-  .atl-table thead tr {
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
 
-  .atl-table tr {
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) tr {
     border: 1px solid var(--atl-neutral-lighter);
     border-radius: 4px;
     margin-bottom: 12px;
     padding: 8px;
     background: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .atl-table td {
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) td {
     border: none;
     position: relative;
     padding: 8px 8px 8px 40%;
     text-align: left;
+    width: 100%;
   }
 
-  .atl-table td:before {
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) td:before {
+    text-transform: none;
+  }
+
+  .atl-table:not(.atl-ranking-table) td:before {
     content: attr(data-label) ": ";
     position: absolute;
     left: 8px;
@@ -346,7 +454,8 @@ a.atl-link:hover {
     color: var(--atl-neutral);
   }
 
-  .atl-table td:first-child {
+  /* 最初の列をタイトルとして表示（data-labelがない場合のみ） */
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) td:first-child:not([data-label]) {
     padding-top: 12px;
     font-weight: 600;
     border-bottom: 1px solid var(--atl-neutral-lighter);
@@ -354,32 +463,29 @@ a.atl-link:hover {
     padding-bottom: 8px;
   }
 
-  .atl-table td:first-child:before {
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) td:first-child:not([data-label]):before {
     display: none;
   }
-}
-
-/* スマホ用テーブルのダークモード対応 */
-@media (max-width: 639px) and (prefers-color-scheme: dark) {
-  .atl-table tr {
-    background: var(--atl-surface-dark);
-    border-color: #38414A;
+  
+  /* data-labelがある場合は通常のラベル表示 */
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) td:first-child[data-label] {
+    padding: 8px 8px 8px 40%;
   }
 
-  .atl-table td:before {
-    color: #B3BAC5;
+  .atl-table:not(.atl-ranking-table):not(.atl-table-no-card) td:first-child[data-label]:before {
+    display: block;
   }
-
-  .atl-table td:first-child {
-    border-bottom-color: #38414A;
-    color: #FFFFFF;
+  .atl-table:not(.atl-ranking-table) td:not([data-label]):before {
+    display: none;
   }
-
-  .atl-table td {
-    color: #B3BAC5;
+  
+  /* ランキングテーブルは通常のテーブル表示を維持（横スクロール可能） */
+  .atl-table-wrapper:has(.atl-ranking-table) {
+    overflow-x: auto;
   }
 }
 
+/* スマホ用テーブルのダークモード対応（ランキングテーブルは除く） */
 @media (min-width: 640px) {
   .atl-table {
     width: 100%;
@@ -433,28 +539,6 @@ a.atl-link:hover {
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .atl-table th {
-    background: #22272B;
-    border-bottom-color: #38414A;
-  }
-
-  .atl-table td {
-    border-bottom-color: #38414A;
-  }
-
-  .atl-table tbody tr:nth-child(even) {
-    background: #1D2125;
-  }
-
-  .atl-table tbody tr:hover {
-    background: #22272B;
-  }
-
-  .atl-table-row--champion {
-    background: rgba(255, 153, 31, 0.1) !important;
-  }
-}
 
 /* ---- Footer / Nav ---- */
 .atl-footer,
@@ -467,15 +551,3 @@ a.atl-link:hover {
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  .atl-footer,
-  .atl-nav {
-    border-top-color: #38414A;
-    color: #8C9CB8;
-  }
-
-  /* Tailwindのtext-atlassian-blueクラスをダークモードで明るく */
-  .text-atlassian-blue {
-    color: #4C9AFF !important;
-  }
-}

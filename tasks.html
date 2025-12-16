@@ -35,89 +35,94 @@
   <main class="atl-main">
     
 <header class="atl-header">
-  <h1 class="atl-page-title">作者自身のグループ のタスク一覧</h1>
+  <div class="atl-hero">
+    <div>
+      <h1 class="atl-page-title">作者自身のグループ のタスク一覧</h1>
+      <p class="atl-hero-subtitle">
+        デフォルトのタスクに加えて、各グループ独自のポイント設定もサクッと確認できます。
+      </p>
+    </div>
+    <div class="atl-hero-cta">
+      <a class="atl-btn atl-btn--primary" href="index.html">トップへ戻る</a>
+      <a class="atl-btn atl-btn--ghost" href="commands.html">コマンド一覧</a>
+    </div>
+  </div>
 </header>
 
-<div class="atl-table-wrapper">
-  <table class="atl-table">
-    <thead>
-      <tr>
-        <th scope="col">タスク名</th>
-        <th scope="col">ポイント</th>
-        <th scope="col">エイリアス</th>
-      </tr>
-    </thead>
-    <tbody>
-    
-      <tr>
-        <td class="font-medium">ごはん作り</td>
-        <td>300</td>
-        <td class="atl-text-muted text-sm">ごはんづくり, ごはん作り, ご飯づくり, ご飯作り, 夕飯, 料理, 晩ご飯, 調理</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">ゴミ出し</td>
-        <td>50</td>
-        <td class="atl-text-muted text-sm">ごみ, ゴミ, ごみだし, ゴミ出し</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">トイレ掃除</td>
-        <td>400</td>
-        <td class="atl-text-muted text-sm">といれ, トイレ, といれそうじ, トイレそうじ, トイレ掃除, トイレ清掃</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">台所排水溝</td>
-        <td>80</td>
-        <td class="atl-text-muted text-sm">台所排水溝</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">床掃除</td>
-        <td>200</td>
-        <td class="atl-text-muted text-sm">ゆか, ゆかそうじ, 床, 床掃除, 床清掃</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">洗濯(ドラム式)</td>
-        <td>100</td>
-        <td class="atl-text-muted text-sm">せんたく, せんたくもの, せんたく物, 洗濯, 洗濯物</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">洗面台掃除</td>
-        <td>200</td>
-        <td class="atl-text-muted text-sm">せんめんだい, せんめんだいそうじ, 洗面台, 洗面台掃除, 洗面台清掃</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">皿洗い</td>
-        <td>180</td>
-        <td class="atl-text-muted text-sm">さらあらい, 洗いもの, 洗い物, 皿洗い</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">買い出し</td>
-        <td>250</td>
-        <td class="atl-text-muted text-sm">かいもの, 買いもの, 買い出し, 買い物, 買出し</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">風呂掃除</td>
-        <td>150</td>
-        <td class="atl-text-muted text-sm">ふろ, ふろそうじ, 風呂, 風呂掃除, 風呂清掃</td>
-      </tr>
-    
-      <tr>
-        <td class="font-medium">風呂排水溝</td>
-        <td>300</td>
-        <td class="atl-text-muted text-sm">排水溝風呂, 風呂の排水溝, 風呂排水溝</td>
-      </tr>
-    
-    </tbody>
-  </table>
-</div>
+<section class="atl-section">
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">登録タスク</h2>
+    <p class="atl-text-muted">タスク名とポイントだけをシンプルに表示します。</p>
+  </div>
+  <div class="atl-table-wrapper">
+    <table class="atl-table atl-table-no-card">
+      <thead>
+        <tr>
+          <th scope="col">タスク名</th>
+          <th scope="col">ポイント</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td class="font-medium">ごはん作り</td>
+          <td>300</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">ゴミ出し</td>
+          <td>50</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">トイレ掃除</td>
+          <td>400</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">台所排水溝</td>
+          <td>80</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">床掃除</td>
+          <td>200</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">洗濯(ドラム式)</td>
+          <td>100</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">洗面台掃除</td>
+          <td>200</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">皿洗い</td>
+          <td>180</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">買い出し</td>
+          <td>250</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">風呂掃除</td>
+          <td>150</td>
+        </tr>
+      
+        <tr>
+          <td class="font-medium">風呂排水溝</td>
+          <td>300</td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+</section>
 
   </main>
 </body>
