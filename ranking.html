@@ -35,44 +35,60 @@
   <main class="atl-main">
     
 <header class="atl-header">
-  <h1 class="atl-page-title">作者自身のグループ の週間ランキング</h1>
-  <p class="atl-text-muted">集計期間: 2025-12-15 〜 2025-12-21</p>
+  <div class="atl-hero">
+    <div>
+      <h1 class="atl-page-title">作者自身のグループ の週間ランキング</h1>
+      <p class="atl-hero-subtitle">2025-12-15 〜 2025-12-21 の集計結果です。</p>
+    </div>
+    <div class="atl-hero-cta">
+      <a class="atl-btn atl-btn--primary" href="index.html">トップへ戻る</a>
+      <a class="atl-btn atl-btn--ghost" href="tasks.html">タスク一覧</a>
+    </div>
+  </div>
 </header>
 
-
-<div class="atl-table-wrapper">
-  <table class="atl-table">
-    <thead>
-      <tr>
-        <th scope="col">順位</th>
-        <th scope="col">名前</th>
-        <th scope="col">ポイント</th>
-      </tr>
-    </thead>
-    <tbody>
+<section class="atl-section">
+  <div class="atl-section-head">
+    <h2 class="atl-section-title">今週のランキング</h2>
     
-      <tr class="atl-table-row--champion">
-        <td>1</td>
-        <td>田中 樂空</td>
-        <td>600pt</td>
-      </tr>
+    <p class="atl-text-muted">チャンピオン: bot作者（600pt）</p>
     
-      <tr>
-        <td>2</td>
-        <td>星瞬</td>
-        <td>230pt</td>
-      </tr>
-    
-      <tr>
-        <td>3</td>
-        <td>北村 琢真</td>
-        <td>200pt</td>
-      </tr>
-    
-    </tbody>
-  </table>
-</div>
-
+  </div>
+  
+  <div class="atl-table-wrapper">
+    <table class="atl-table atl-ranking-table">
+      <thead>
+        <tr>
+          <th scope="col">順位</th>
+          <th scope="col">名前</th>
+          <th scope="col">ポイント</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr class="atl-table-row--champion">
+          <td data-label="順位">1</td>
+          <td data-label="名前">bot作者</td>
+          <td data-label="ポイント">600pt</td>
+        </tr>
+      
+        <tr>
+          <td data-label="順位">2</td>
+          <td data-label="名前">いつも頑張ってくれる人</td>
+          <td data-label="ポイント">230pt</td>
+        </tr>
+      
+        <tr>
+          <td data-label="順位">3</td>
+          <td data-label="名前">やろうとしている人</td>
+          <td data-label="ポイント">200pt</td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+  
+</section>
 
   </main>
 </body>
